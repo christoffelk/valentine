@@ -18,16 +18,96 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #EBA6B0;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@font-face {
+  font-family: 'valentine';
+  src: url('./asset/Valentine\ Cute.ttf');
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center, 
+}
+
+.content-text {
+  width:60%;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  z-index: 99,
+}
+
+.animation1,.animation3{
+  width: 20%;
+}
+
+.animation2{
+  width: 40%;
+}
+
+.animation3{
+  rotate: -120deg;
+}
+
+.next-button {
+   background-color: pink;
+  border-radius: 8px;
+  margin-top: 8px;
+   padding: 16px
+}
+
+.container-page-2{
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px
+}
+
+.center-text {
+  text-align: center;
+}
+
+.button-answer {
+  padding: 16px;
+  border-radius: 8px;
+  width: 45%;
+}
+
+.yes-button {
+  background-color: lightgreen;
+}
+
+.no-button {
+  background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .animation1,.animation3{
+    width: 15%;
+  }
+
+  .animation2{
+    width:100%
   }
 }
